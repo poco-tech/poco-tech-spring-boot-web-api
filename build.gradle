@@ -27,3 +27,14 @@ task buildApiDoc(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTa
 	inputSpec = "$rootDir/src/main/resources/api-schema.yaml".toString()
 	outputDir = "$buildDir/apidoc".toString()
 }
+
+task buildSpringServer(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask){
+	generatorName = "spring"
+	inputSpec = "$rootDir/src/main/resources/api-schema.yaml".toString()
+	outputDir = "$buildDir/spring".toString()
+	apiPackage = "com.example.todoapi.controller"
+	modelPackage = "com.example.todoapi.model"
+	configOptions = [
+			interfaceOnly: "true"
+	]
+}
