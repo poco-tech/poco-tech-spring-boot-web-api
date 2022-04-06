@@ -38,3 +38,5 @@ task buildSpringServer(type: org.openapitools.generator.gradle.plugin.tasks.Gene
 			interfaceOnly: "true"
 	]
 }
+
+compileJava.dependsOn tasks.buildSpringServer
