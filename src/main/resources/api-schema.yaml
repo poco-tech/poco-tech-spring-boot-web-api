@@ -9,3 +9,8 @@ paths:
       responses:
         '200':
           description: OK
+  /tasks/1:
+    get:
+      responses:
+        '200':
+          description: OK
