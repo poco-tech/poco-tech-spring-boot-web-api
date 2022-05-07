@@ -3,14 +3,23 @@ info:
   title: TODO API Document
   version: "0.0.1"
   description: TODO API のドキュメントです
+tags:
+  - name: opts
+    description: 運用監視関連のAPI
+  - name: tasks
+    description: タスク関連のAPI
 paths:
   /health:
     get:
+      tags:
+        - opts
       responses:
         '200':
           description: OK
   /tasks/1:
     get:
+      tags:
+        - tasks
       responses:
         '200':
           description: OK
