@@ -20,6 +20,7 @@ paths:
     get:
       tags:
         - tasks
+      operationId: showTask
       responses:
         '200':
           description: OK

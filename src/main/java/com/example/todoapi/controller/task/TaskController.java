@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TaskController implements TasksApi {
 
     @Override
-    public ResponseEntity<Void> tasks1Get() {
+    public ResponseEntity<Void> showTask() {
         return ResponseEntity.ok().build();
     }
 }
