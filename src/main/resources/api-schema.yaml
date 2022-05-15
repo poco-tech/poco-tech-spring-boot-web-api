@@ -24,3 +24,22 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TaskDTO"
+components:
+  schemas:
+    TaskDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: "タスクID"
+        title:
+          type: string
+          description: "タスクのタイトル"
+      required:
+        - id
+        - title
