@@ -8,7 +8,7 @@ import java.util.Optional;
 @Mapper
 public interface TaskRepository {
 
-    @Select("SELECT id, title FROM tasks ORDER BY id LIMIT 1")
-    Optional<TaskRecord> select();
+    @Select("SELECT id, title FROM tasks WHERE id = #{taskId}")
+    Optional<TaskRecord> select(long taskId);
 
 }
