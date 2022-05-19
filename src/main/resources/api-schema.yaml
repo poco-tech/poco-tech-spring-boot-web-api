@@ -32,6 +32,11 @@ paths:
       responses:
         201:
           description: "Created"
+          headers:
+            location:
+              description: "作成されたリソースのURI"
+              schema:
+                type: string
           content:
             application/json:
               schema:
