@@ -26,6 +26,10 @@ paths:
       responses:
         201:
           description: "Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TaskDTO"
   /tasks/{taskId}:
     get:
       summary: "タスク取得"
