@@ -16,8 +16,20 @@ paths:
       responses:
         '200':
           description: OK
+  /tasks/:
+    post:
+      summary: "タスク作成"
+      description: "タスクを新規作成します"
+      operationId: "createTask"
+      tags:
+        - tasks
+      responses:
+        201:
+          description: "Created"
   /tasks/{taskId}:
     get:
+      summary: "タスク取得"
+      description: "指定されたIDのタスクを1件取得します"
       tags:
         - tasks
       operationId: showTask
