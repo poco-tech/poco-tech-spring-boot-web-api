@@ -133,10 +133,32 @@ components:
       required:
         - id
         - title
+    PageDTO:
+      description: "ページング情報"
+      type: object
+      properties:
+        limit:
+          description: "リクエストされた limit"
+          type: integer
+          format: int32
+        offset:
+          description: "リクエストされた offset"
+          type: integer
+          format: int64
+        size:
+          description: "取得できた件数"
+          type: integer
+          format: int32
+      required:
+        - limit
+        - offset
+        - size
     TaskListDTO:
       description: "タスクのリスト"
       type: object
       properties:
+        page:
+          $ref: "#/components/schemas/PageDTO"
         results:
           type: array
           items:
