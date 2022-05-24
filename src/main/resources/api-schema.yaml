@@ -50,6 +50,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TaskListDTO"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequestError"
     post:
       summary: "タスク作成"
       description: "タスクを新規作成します"
