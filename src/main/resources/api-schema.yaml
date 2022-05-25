@@ -114,6 +114,24 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ResourceNotFoundError"
+    put:
+      summary: "タスク更新"
+      description: "指定されたタスクをリクエストボディの内容で上書きします"
+      operationId: "editTask"
+      tags:
+        - tasks
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          description: "更新するタスクのID"
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: "OK"
 components:
   schemas:
     TaskForm:
