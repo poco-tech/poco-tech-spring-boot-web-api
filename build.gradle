@@ -61,5 +61,5 @@ tasks.register('packageApi', Exec) {
 	commandLine './mvnw', 'clean', 'install', "-f", "$buildDir/spring/pom.xml"
 }
 
-compileJava.dependsOn tasks.openApiGenerate
+compileJava.dependsOn tasks.packageApi
 packageApi.dependsOn tasks.openApiGenerate
