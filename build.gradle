@@ -52,6 +52,9 @@ openApiGenerate {
 			interfaceOnly: "true"
 	]
 }
+openApiValidate {
+	inputSpec = "$rootDir/src/main/resources/api-schema.yaml"
+}
 
 compileJava.dependsOn tasks.buildSpringServer
 sourceSets.main.java.srcDir "$buildDir/spring/src/main/java"
