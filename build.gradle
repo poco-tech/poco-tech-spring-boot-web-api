@@ -42,7 +42,7 @@ tasks.register('buildApiDoc', org.openapitools.generator.gradle.plugin.tasks.Gen
 	outputDir = "$buildDir/apidoc".toString()
 }
 
-task buildSpringServer(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask){
+openApiGenerate {
 	generatorName = "spring"
 	inputSpec = "$rootDir/src/main/resources/api-schema.yaml".toString()
 	outputDir = "$buildDir/spring".toString()
