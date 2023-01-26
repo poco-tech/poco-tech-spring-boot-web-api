@@ -58,8 +58,8 @@ openApiValidate {
 }
 
 tasks.register('packageApi', Exec) {
-	workingDir "${buildDir}/spring"
-	commandLine 'mvn', 'clean', 'install'
+	commandLine './mvnw', 'clean', 'install', "-f", "$buildDir/spring/pom.xml"
 }
 
 compileJava.dependsOn tasks.openApiGenerate
+packageApi.dependsOn tasks.openApiGenerate
