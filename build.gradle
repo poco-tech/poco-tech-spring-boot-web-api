@@ -36,7 +36,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-task buildApiDoc(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask){
+tasks.register('buildApiDoc', org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
 	generatorName = "html2"
 	inputSpec = "$rootDir/src/main/resources/api-schema.yaml".toString()
 	outputDir = "$buildDir/apidoc".toString()
