@@ -2,12 +2,12 @@ package com.example.todoapi.controller.advice;
 
 import com.example.todoapi.model.BadRequestError;
 import com.example.todoapi.model.InvalidParam;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.ElementKind;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
-import javax.validation.ElementKind;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
